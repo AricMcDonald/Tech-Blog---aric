@@ -1,0 +1,16 @@
+<ol style="list-style: none;">
+    {{#each this}}
+    <li>
+        <article class="card">
+            <div class="card-title">
+                <p>{{user.username}} Commented on {{format_date created_at}}</p>
+            </div>
+            <div class="card-body">
+                <p>
+                    {{comment_text}}
+                </p>
+            </div>
+        </article>
+    </li>
+    {{/each}}
+</ol>

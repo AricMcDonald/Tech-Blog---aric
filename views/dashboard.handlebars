@@ -1,0 +1,15 @@
+<a class="btn btn-primary" href="/dashboard/createPost">Create New Blog Post</a>
+
+{{#if posts.length}}
+<section>
+    <h1>Posts By You: </h1>
+    <ol style="list-style: none;">
+        {{#each posts as |post|}}
+        <li>
+            {{> postInfo post}}
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}
